@@ -26,4 +26,4 @@ jobs:
         with:
           find: "hello"
           replace: "world"
-          include: "Error/" # optional, default is .*
+          include: "README.md" # optional, default is .*
