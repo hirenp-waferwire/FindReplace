@@ -26,4 +26,4 @@ jobs:
         with:
           find: "hello"
           replace: "world"
-          include: "test.txt" # optional, default is .*
+          include: "Error/" # optional, default is .*
