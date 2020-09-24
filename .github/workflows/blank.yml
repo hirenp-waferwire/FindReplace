@@ -8,10 +8,7 @@ jobs:
         with:
          fetch-depth: "0"
         
-      - name: Find and Replace
-        uses: jacobtomlinson/gha-find-replace@master
-        with:
-          include: "test/"
-          find: "hello"
-          replace: "world"
+      - name: Check outputs and modified files
+        run: |
+          grep "Hello there" test/hello.txt
           
