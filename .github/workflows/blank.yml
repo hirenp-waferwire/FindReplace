@@ -11,6 +11,10 @@ jobs:
           include: "test/"
           find: "hello"
           replace: "have"
+       
+      - name: Check outputs and modified files
+        run: |
+         sed -i 's/hello/world/' test/hello.txt
           
       - name: Find and Replace
         uses: jitterbit/get-changed-files@v1
