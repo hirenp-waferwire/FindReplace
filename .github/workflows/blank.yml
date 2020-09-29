@@ -8,9 +8,18 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@master
         with:
-          include: "test/"
+          include: "test/hello.txt"
           find: "hello"
           replace: "have"
+        
+      - name: Check outputs and modified files
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "test/hello.txt"
+          git push   
+          
        
       
           
