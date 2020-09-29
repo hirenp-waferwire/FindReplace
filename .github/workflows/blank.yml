@@ -1,5 +1,12 @@
 name: My Workflow
-on: [push, pull_request]
+on: 
+  push:
+    branches: #[ master ]
+      - "Feature*" 
+    #paths:
+    #- '**.md'
+  #pull_request:
+    #branches: [ master ]
 jobs:
   build:
     runs-on: ubuntu-latest
