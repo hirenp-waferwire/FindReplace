@@ -34,7 +34,10 @@ jobs:
         find: "hello"
         replace: "have demo"
         include: "test/"
-       
+   
+    - name: Test
+      run: "${{ steps.selftest.outputs.modifiedFiles }}"
+          
     - name: Check outputs and modified files
       run: |
         git config user.name github-actions
