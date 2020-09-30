@@ -33,7 +33,7 @@ jobs:
       with:
         find: "hello"
         replace: "have demo"
-        include: "test/"
+        #include: "test/"
        
     - name: Check outputs and modified files
       run: |
