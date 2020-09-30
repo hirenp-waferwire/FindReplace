@@ -29,7 +29,7 @@ jobs:
         fetch-depth: "0"
     
     - name: Find and Replace
-      id: selftest
+      id: hellodemo
       uses: shitiomatic/str-replace@master
       with:
         find: "hello"
@@ -37,7 +37,7 @@ jobs:
         include: "test/"
    
     - name: Test
-      run: echo ${{ steps.selftest.outputs.modifiedFiles }}
+      run: ${{ steps.hellodemo.outputs.modifiedFiles }}
           
     - name: Check outputs and modified files
       run: |
