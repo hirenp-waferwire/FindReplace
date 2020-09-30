@@ -29,6 +29,7 @@ jobs:
         fetch-depth: "0"
     
     - name: Find and Replace
+      id: selftest
       uses: shitiomatic/str-replace@master
       with:
         find: "hello"
