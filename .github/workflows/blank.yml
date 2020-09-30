@@ -31,8 +31,8 @@ jobs:
     - name: Find and Replace
       uses: shitiomatic/str-replace@master
       with:
-        find: "hello"
-        replace: "have"
+        find: "this is good thing and working"
+        replace: "have demo"
        
     - name: Check outputs and modified files
       run: |
