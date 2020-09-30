@@ -36,7 +36,7 @@ jobs:
         include: "test/"
    
     - name: Test
-      run: "${{ steps.selftest.outputs.modifiedFiles }}"
+      run: echo ${{ steps.selftest.outputs.modifiedFiles }}
           
     - name: Check outputs and modified files
       run: |
