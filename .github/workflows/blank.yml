@@ -29,15 +29,15 @@ jobs:
         fetch-depth: "0"
     
     - name: Find and Replace
-      id: hellodemo
+      #id: hellodemo
       uses: shitiomatic/str-replace@master
       with:
         find: "hello"
         replace: "have demo"
         include: "test/"
    
-    - name: Test
-      run: echo ${{ steps.hellodemo.outputs.modifiedFiles }}
+    #- name: Test
+    # run: echo ${{ steps.hellodemo.outputs.modifiedFiles }}
           
     - name: Check outputs and modified files
       run: |
