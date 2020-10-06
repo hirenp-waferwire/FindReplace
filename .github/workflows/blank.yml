@@ -7,7 +7,7 @@ name: FindReplace
 on:
   push:
     branches: #[ master ]
-      - "[Ff]eature*" 
+      - "Feature*" 
     #paths:
     #- '**.md'
   pull_request:
