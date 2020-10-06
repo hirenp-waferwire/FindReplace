@@ -28,13 +28,28 @@ jobs:
       with:
         fetch-depth: "0"
     
+    - name: '' #get changed files
+      id: getfile
+      run: |
+        echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | xargs)"
+    
+    - name: '' #get changed files
+      id: getDirName
+      run: |
+        echo "::set-output name=dirs::$(dirname ${{ steps.getfile.outputs.files }})"
+    
+    #- name: echo output
+      #run: |
+        #echo ${{ steps.getfile.outputs.files }}
+        #echo ${{ steps.getDirName.outputs.dirs }}
+        
     - name: Find and Replace
       #id: hellodemo
       uses: shitiomatic/str-replace@master
       with:
         find: "hello"
         replace: "have demo"
-        include: "test/"
+        include: ${{ steps.getfile.outputs.files }} #${{ steps.getDirName.outputs.dirs }} #"test/"
    
     #- name: Test
     # run: echo ${{ steps.hellodemo.outputs.modifiedFiles }}
@@ -46,12 +61,9 @@ jobs:
         git add .
         git commit -m "Find and Replace Commit"
         git push   
-       
-          
-       
-      
-          
+             
+           
+        
             
-      
-      
+          
           
