@@ -53,13 +53,13 @@ jobs:
         find: "have"
         replace: "hello"
         
-        # which file is committed by the user that only searching 
+        # search returns only committed file by user 
         include: ${{ steps.getfile.outputs.files }} 
         
-        # only searching such directory's files and subdirectory's files whose file is committed by the user
+        # only searching such directory's files and subdirectory's files which is committed by the user
         #include: ${{ steps.getDirName.outputs.dirs }} 
        
-        # always searching directory or file by its name that is available with double quotes i.e "test", "test/xyx.txt", "xyx.txt"
+        # always searching directory or file by its name which is available with double quotes i.e "test", "test/xyx.txt", "xyx.txt"
         #include: ""
         
         
