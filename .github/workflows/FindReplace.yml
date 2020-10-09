@@ -53,16 +53,16 @@ jobs:
         find: "have"
         replace: "hello"
         
-        ## This below line code avaible to check only modified file
-        #include: ${{ steps.getfile.outputs.files }} 
+        # which file is committed by the user that only searching 
+        include: ${{ steps.getfile.outputs.files }} 
         
-        ## This below line code avaible to check only modified file
+        # only searching such directory's files and subdirectory's files whose file is committed by the user
         #include: ${{ steps.getDirName.outputs.dirs }} 
        
-        #current modify file  
-        #include: "test/"
+        # always searching directory or file by its name that is available with double quotes i.e "test", "test/xyx.txt", "xyx.txt"
+        #include: ""
         
-        include: "README.md"
+        
    
     - name: Modified Files
       run: echo ${{ steps.fn.outputs.modifiedFiles }}
