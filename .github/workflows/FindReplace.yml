@@ -52,11 +52,16 @@ jobs:
       with:
         find: "have"
         replace: "hello"
+        
+        ## This below line code avaible to check only modified file
         #include: ${{ steps.getfile.outputs.files }} 
-        #current modify file  
+        
+        ## This below line code avaible to check only modified file
         #include: ${{ steps.getDirName.outputs.dirs }} 
+       
         #current modify file  
         #include: "test/"
+        
         include: "README.md"
    
     - name: Modified Files
