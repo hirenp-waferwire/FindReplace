@@ -7,7 +7,9 @@ name: FindReplace
 on:
   push:
     branches: #[ master ]
-      - "[fF][nN][rR]-*" 
+      - "[fF][nN][rR]-*"
+    paths-ignore:
+    - '**.yml' 
     #paths:
     #- '**.md'
   pull_request:
