@@ -55,7 +55,7 @@ jobs:
         replace: "data"
         
         # search returns only committed file by user 
-        #include: ${{ steps.getfile.outputs.files }} 
+        include: ${{ steps.getfile.outputs.files }} 
         
         # only searching such directory's files and subdirectory's files which is committed by the user
         #include: ${{ steps.getDirName.outputs.dirs }} 
