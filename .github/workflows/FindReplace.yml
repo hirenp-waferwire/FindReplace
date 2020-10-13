@@ -51,8 +51,8 @@ jobs:
       id: fn
       uses: shitiomatic/str-replace@master
       with:
-        find: "have"
-        replace: "hello"
+        find: "test"
+        replace: "data"
         
         # search returns only committed file by user 
         #include: ${{ steps.getfile.outputs.files }} 
