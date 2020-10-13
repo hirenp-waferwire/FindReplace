@@ -10,7 +10,8 @@ on:
       - "[fF][nN][rR]-*"
     #paths-ignore:
     #- '**.yml' 
-    #paths:
+    paths:
+      - '!**.yml'
     #- '**.md'
   #pull_request:
     #branches: #[ master ]
